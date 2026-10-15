@@ -131,7 +131,8 @@ def shortlist(scoring_result, catalogue_rows=None, review_hints=None, limit=5):
     while len(selected)<limit:
         remaining=[r for r in candidates if r["programme_id"] not in used_ids]
         if not remaining: break
-        # Distinctive answers can guide explorations, but do not become a\n        # specific-major claim until the separate two-question gate passes.\n        highest=max((min(r["direct_question_count"],2),r["family_score"]) for r in remaining)
+        # Distinctive answers guide exploration, not unearned specificity.
+        highest=max((min(r["direct_question_count"],2),r["family_score"]) for r in remaining)
         tier=[r for r in remaining if (min(r["direct_question_count"],2),r["family_score"])==highest]
         tier.sort(key=lambda r:(
             -bool(r["direct_discipline_signals"]),
