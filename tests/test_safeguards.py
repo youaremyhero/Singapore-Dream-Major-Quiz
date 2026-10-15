@@ -2,6 +2,7 @@ import unittest, sys, pathlib
 sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]/"src"))
 from engine import score, Q
 from programme_matcher import shortlist, explore_other_opportunities, load_current_catalogue, recommendation_report, PRIMARY_TYPES
+from discipline_mapping import infer_discipline, coverage_summary
 
 class Tests(unittest.TestCase):
     def test_20_questions_three_mixed_chapters(self):
@@ -83,6 +84,27 @@ class Tests(unittest.TestCase):
         report=recommendation_report(score({}))
         self.assertEqual(report["status"],"explore_more")
         self.assertEqual(report["top_matches"],[])
+
+    def test_specific_titles_not_broad_titles(self):
+        self.assertEqual(infer_discipline({"Programme / Major":"Information Security"}),"information_security")
+        self.assertEqual(infer_discipline({"Programme / Major":"Physiotherapy"}),"rehabilitation")
+        self.assertIsNone(infer_discipline({"Programme / Major":"Computer Science"}))
+        self.assertIsNone(infer_discipline({"Programme / Major":"Philosophy, Politics and Economics"}))
+        self.assertIsNone(infer_discipline({"Programme / Major":"Public Safety and Security"}))
+
+    def test_explicit_security_signal_does_not_claim_software(self):
+        result={"core_family_scores":{"computing":4},
+                "core_family_order":["computing"],
+                "eligible_discipline_signals":["information_security"],
+                "core_evidence":{}}
+        candidates=shortlist(result,limit=100)
+        self.assertTrue(any(x["direct_discipline_signals"]==["information_security"] for x in candidates))
+        self.assertFalse(any("software_development" in x["direct_discipline_signals"] for x in candidates))
+
+    def test_working_catalogue_is_not_empty(self):
+        coverage=coverage_summary(load_current_catalogue(),PRIMARY_TYPES)
+        self.assertGreater(coverage["narrowly_mapped_records"],10)
+        self.assertGreater(coverage["unmapped_records"],10)
 
     def test_no_catalogue_size_effect_on_core_scores(self):
         answers={q["id"]:4 for q in Q if q["type"]=="likert"}
