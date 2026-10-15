@@ -16,7 +16,7 @@ Sources are the NUS official AY2026/27 Bulletin and school-controlled programme 
 2. Nursing — **BSc (Nursing) / BSc (Nursing)(Honours)** (Alice Lee Centre): three-year BSc plus possible honours progression. Do not show a duplicate standalone honours degree to incoming students.
 3. Dentistry — four-year **Bachelor of Dental Surgery (BDS)**; honours distinction does not constitute a new entry choice.
 4. Law — four-year **LLB (Honours)**; admission has additional assessment for shortlisted candidates.
-5. Music — four-year **Bachelor of Music (Honours)** at Yong Siew Toh; the Bulletin describes 20 specific majors, but this batch only confirms the degree and general major structure, not a 20-item individually verified list.
+5. Music — four-year **Bachelor of Music (Honours)** at Yong Siew Toh; The project owner has decided to present Music as one individual programme (Bachelor of Music (Honours)); no separate music-major records are needed.
 
 ## Special offerings deliberately excluded from default primary recommendations
 - Part-time **BSc (Nursing Practice)** for nursing diploma holders/working nurses; this is not the same full-time pre-university degree path.
@@ -24,7 +24,7 @@ Sources are the NUS official AY2026/27 Bulletin and school-controlled programme 
 - Additional specialised programme/track types follow the existing **Explore More** policy.
 
 ## Outstanding NUS audit work
-- Verify individual current BMus majors and direct official programme pages.
+- Verify the main Bachelor of Music degree's direct official programme page; individual music-major records are intentionally out of scope.
 - Reconcile and fill working-catalogue professional-degree rows using the verified sources, preserving record IDs.
 - Full second-major and minor reconciliation including AY2026/27 current availability and cohort restrictions.
 - Cross-disciplinary catalogue audits beyond Geospatial Intelligence and programme-level direct links across NUS.
