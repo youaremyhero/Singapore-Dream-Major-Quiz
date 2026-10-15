@@ -13,3 +13,6 @@ jobs:
           python-version: '3.11'
       - name: Run scoring safeguards
         run: python -m unittest discover -s tests -p 'test_safeguards.py' -v
+
+      - name: Print synthetic profile recommendations
+        run: python tests/profile_diagnostics.py
