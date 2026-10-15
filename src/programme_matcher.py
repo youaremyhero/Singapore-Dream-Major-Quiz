@@ -7,6 +7,18 @@ import csv
 from pathlib import Path
 from discipline_mapping import infer_discipline
 
+DISCIPLINE_FAMILY = {
+    "information_security":"computing","software_development":"computing",
+    "artificial_intelligence":"computing","data_science":"computing",
+    "civil_engineering":"engineering","mechanical_engineering":"engineering",
+    "environmental_engineering":"engineering","rehabilitation":"life_health",
+    "patient_care":"life_health","biomedical_research":"life_health",
+    "physics":"physical_sciences","chemistry":"physical_sciences",
+    "economics":"business","accounting":"business","psychology":"society",
+    "history":"humanities","literature":"humanities","law":"law_policy",
+}
+
+
 PRIMARY_TYPES = {
     "Undergraduate degree / programme", "Primary major",
     "Named degree or business major pathway", "Cross-disciplinary degree",
@@ -67,9 +79,18 @@ def shortlist(scoring_result, catalogue_rows=None, review_hints=None, limit=5):
         title = row.get("Programme / Major","").strip()
         if not title: continue
         categories = {x.strip() for x in row.get("Discovery Areas (PROVISIONAL)","").split(";") if x.strip()}
-        matched = [f for f in positive if categories & FAMILY_AREAS.get(f,set())]
-        hints = review_hints.get(row.get("Record ID"),set())
         title_discipline=infer_discipline(row)
+        title_family=DISCIPLINE_FAMILY.get(title_discipline)
+        # A specific titled degree must never inherit unrelated catalogue categories.
+        # Broad catalogue metadata can suggest exploration only if unambiguous.
+        if title_family:
+            matched=[title_family] if title_family in positive else []
+        else:
+            matched=[f for f in positive if categories & FAMILY_AREAS.get(f,set())]
+            # Ambiguous interdisciplinary tags are too weak to rank a specific degree.
+            if len(categories)>1:
+                matched=[]
+        hints = review_hints.get(row.get("Record ID"),set())
         # A narrow title can be directly supported only by the evidence-gated discipline.
         direct = [title_discipline] if title_discipline in direct_signals else []
         if not matched: continue
