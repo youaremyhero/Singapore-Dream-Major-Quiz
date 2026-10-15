@@ -30,3 +30,6 @@ The provisional catalogue remains usable internally while each school's official
 - Show **Music — NUS (Bachelor of Music (Honours))** as **one individual programme** in the student-facing catalogue and recommendations.
 - Do **not** list individual instruments, performance disciplines, or music majors as separate quiz programmes.
 - University-specific music study options may be described on the official programme page, but do not generate separate result cards or duplicate degrees.
+
+## NUS Music
+Treat **Bachelor of Music (Honours)** as one student-facing Music programme. Individual instruments and music majors are not separate quiz programme records or top matches. Retain their detail only as supporting source context, not as additional recommendations.
