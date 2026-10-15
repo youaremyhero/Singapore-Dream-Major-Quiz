@@ -37,6 +37,28 @@ class Tests(unittest.TestCase):
         self.assertTrue(all(r["record_type"] in PRIMARY_TYPES for r in shortlist(example,rows)))
         self.assertTrue(all(r["record_type"] not in PRIMARY_TYPES for r in explore_other_opportunities(rows)))
 
+    def test_top_five_are_unique_and_grounded(self):
+        example={"core_family_scores":{"computing":4,"business":3},
+                 "core_family_order":["computing","business"],
+                 "eligible_discipline_signals":[]}
+        result=shortlist(example,load_current_catalogue(),limit=5)
+        self.assertEqual(len(result),5)
+        self.assertEqual(len({r["programme_id"] for r in result}),5)
+        self.assertTrue(all(r["source_url"] and r["family_score"]>0 for r in result))
+
+    def test_five_results_not_all_from_one_university_when_alternatives_exist(self):
+        example={"core_family_scores":{"computing":4},
+                 "core_family_order":["computing"],
+                 "eligible_discipline_signals":[]}
+        result=shortlist(example,load_current_catalogue(),limit=5)
+        self.assertGreaterEqual(len({r["university"] for r in result}),2)
+
+    def test_original_interest_scores_unchanged(self):
+        core={q["id"]:4 for q in Q if q["type"]=="likert"}
+        original=score(core)["core_family_scores"]
+        shortlist(score(core),load_current_catalogue(),limit=5)
+        self.assertEqual(original,score(core)["core_family_scores"])
+
     def test_no_catalogue_size_effect_on_core_scores(self):
         answers={q["id"]:4 for q in Q if q["type"]=="likert"}
         before=score(answers)["core_family_scores"]
