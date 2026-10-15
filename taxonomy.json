@@ -1,0 +1,77 @@
+{
+  "physical_sciences": [
+    "scientific_inquiry",
+    "chemistry",
+    "physics",
+    "quantitative_modelling",
+    "materials_energy"
+  ],
+  "life_health": [
+    "living_systems",
+    "biomedical_research",
+    "person_care",
+    "rehabilitation",
+    "biomedical_technology"
+  ],
+  "computing": [
+    "digital_problem_solving",
+    "data_reasoning",
+    "software_creation",
+    "cybersecurity",
+    "ai_methods",
+    "statistics"
+  ],
+  "engineering": [
+    "engineering_design",
+    "prototyping",
+    "mechanical_systems",
+    "civil_infrastructure",
+    "electronics",
+    "environmental_engineering"
+  ],
+  "business": [
+    "business_strategy",
+    "entrepreneurship",
+    "consumer_research",
+    "economics",
+    "accounting",
+    "service_operations"
+  ],
+  "society": [
+    "people_research",
+    "community",
+    "social_inquiry",
+    "psychology",
+    "child_development"
+  ],
+  "humanities": [
+    "cultural_studies",
+    "historical_inquiry",
+    "literature_language",
+    "philosophy"
+  ],
+  "creative": [
+    "creative_communication",
+    "creative_expression",
+    "performing_arts",
+    "digital_media",
+    "visual_design",
+    "inclusive_design"
+  ],
+  "law_policy": [
+    "law_policy",
+    "ethical_reasoning"
+  ],
+  "applied": [
+    "hospitality",
+    "transport_operations",
+    "education",
+    "sport_science",
+    "food_science",
+    "rehabilitation"
+  ],
+  "environment": [
+    "environmental_inquiry",
+    "environmental_engineering"
+  ]
+}

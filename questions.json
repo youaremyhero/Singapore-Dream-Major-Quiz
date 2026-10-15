@@ -1,0 +1,760 @@
+[
+  {
+    "id": "Q01",
+    "stage": 1,
+    "type": "scenario",
+    "prompt": "A community has a problem to solve. What would you be most curious to do?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Listen to residents and understand their experiences",
+        "signals": [
+          "people_research",
+          "community"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Design and test a physical solution",
+        "signals": [
+          "engineering_design",
+          "prototyping"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Collect observations and investigate causes",
+        "signals": [
+          "scientific_inquiry",
+          "data_reasoning"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Explain the issue through visual stories or media",
+        "signals": [
+          "creative_communication",
+          "digital_media"
+        ]
+      }
+    ],
+    "displayNumber": 1,
+    "origin": "12Q draft",
+    "chapterTitle": "What Sparks Your Curiosity?"
+  },
+  {
+    "id": "Q05",
+    "stage": 1,
+    "type": "likert",
+    "prompt": "I enjoy investigating why things happen and testing different explanations.",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "signals": [
+      "scientific_inquiry",
+      "evidence_reasoning"
+    ],
+    "neutralIsZero": true,
+    "displayNumber": 2,
+    "origin": "12Q draft",
+    "chapterTitle": "What Sparks Your Curiosity?"
+  },
+  {
+    "id": "Q02",
+    "stage": 1,
+    "type": "scenario",
+    "prompt": "A discovery sparks your curiosity. Which investigations appeal to you?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Explore substances and chemical reactions",
+        "signals": [
+          "chemistry",
+          "scientific_inquiry"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Explore motion, forces or energy",
+        "signals": [
+          "physics",
+          "quantitative_modelling"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Explore living organisms and body systems",
+        "signals": [
+          "living_systems",
+          "biomedical_research"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Create a practical invention based on the discovery",
+        "signals": [
+          "engineering_design",
+          "prototyping"
+        ]
+      }
+    ],
+    "displayNumber": 3,
+    "origin": "12Q draft",
+    "chapterTitle": "What Sparks Your Curiosity?"
+  },
+  {
+    "id": "N03",
+    "stage": 1,
+    "type": "likert",
+    "prompt": "I would enjoy exploring stories, languages, history or cultural ideas, even when there is no single right answer.",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "signals": [
+      "cultural_studies",
+      "literature_language",
+      "historical_inquiry"
+    ],
+    "neutralIsZero": true,
+    "displayNumber": 4,
+    "origin": "New 18Q candidate",
+    "chapterTitle": "What Sparks Your Curiosity?"
+  },
+  {
+    "id": "Q03",
+    "stage": 1,
+    "type": "scenario",
+    "prompt": "You are making something to share with others. Which sounds most appealing?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Investigate the history and culture behind a story",
+        "signals": [
+          "cultural_studies",
+          "historical_inquiry"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Create art, music or a performance",
+        "signals": [
+          "creative_expression",
+          "performing_arts"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Build an interactive digital experience",
+        "signals": [
+          "digital_media",
+          "software_creation"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Develop a business idea and work out how it could succeed",
+        "signals": [
+          "business_strategy",
+          "entrepreneurship"
+        ]
+      }
+    ],
+    "displayNumber": 5,
+    "origin": "12Q draft",
+    "chapterTitle": "What Sparks Your Curiosity?"
+  },
+  {
+    "id": "N02",
+    "stage": 1,
+    "type": "scenario",
+    "prompt": "A local organisation is making a big decision. Which role sounds most interesting?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Compare costs, prices and economic effects",
+        "signals": [
+          "economics",
+          "quantitative_modelling"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Plan how a team could deliver the project",
+        "signals": [
+          "service_operations",
+          "business_strategy"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Develop a product and find people who might want it",
+        "signals": [
+          "entrepreneurship",
+          "consumer_research"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Evaluate fairness and the impact of the decision",
+        "signals": [
+          "law_policy",
+          "ethical_reasoning"
+        ]
+      }
+    ],
+    "displayNumber": 6,
+    "origin": "New 18Q candidate",
+    "chapterTitle": "What Sparks Your Curiosity?"
+  },
+  {
+    "id": "Q04",
+    "stage": 1,
+    "type": "scenario",
+    "prompt": "Someone needs support with a challenge. What would you rather explore?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Help them regain everyday abilities through rehabilitation activities",
+        "signals": [
+          "rehabilitation",
+          "person_care"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Understand their feelings, relationships or behaviour",
+        "signals": [
+          "people_research",
+          "psychology"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Design a tool that makes daily tasks easier",
+        "signals": [
+          "engineering_design",
+          "inclusive_design"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Organise a service to make support easier to access",
+        "signals": [
+          "service_operations",
+          "community"
+        ]
+      }
+    ],
+    "displayNumber": 7,
+    "origin": "12Q draft",
+    "chapterTitle": "What Sparks Your Curiosity?"
+  },
+  {
+    "id": "N01",
+    "stage": 2,
+    "type": "scenario",
+    "prompt": "A digital service has a problem. Which task sounds most interesting?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Investigate suspicious activity and protect user accounts",
+        "signals": [
+          "cybersecurity",
+          "digital_problem_solving"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Write and improve the software that people use",
+        "signals": [
+          "software_creation",
+          "digital_problem_solving"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Use data to identify what users need",
+        "signals": [
+          "data_reasoning",
+          "statistics"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Explore how a computer could recognise patterns",
+        "signals": [
+          "ai_methods",
+          "data_reasoning"
+        ]
+      }
+    ],
+    "displayNumber": 8,
+    "origin": "New 18Q candidate",
+    "chapterTitle": "How Do You Think?"
+  },
+  {
+    "id": "Q06",
+    "stage": 2,
+    "type": "likert",
+    "prompt": "I am curious about how digital tools or information can help solve problems.",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "signals": [
+      "digital_problem_solving",
+      "data_reasoning"
+    ],
+    "neutralIsZero": true,
+    "displayNumber": 9,
+    "origin": "12Q draft",
+    "chapterTitle": "How Do You Think?"
+  },
+  {
+    "id": "N08",
+    "stage": 2,
+    "type": "scenario",
+    "prompt": "You can help create a public exhibition. Which contribution appeals to you?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Research historical events and interpret primary sources",
+        "signals": [
+          "historical_inquiry",
+          "cultural_studies"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Examine arguments about justice and rights",
+        "signals": [
+          "law_policy",
+          "ethical_reasoning"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Explore how language and literature communicate ideas",
+        "signals": [
+          "literature_language",
+          "creative_communication"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Investigate human choices and social behaviour",
+        "signals": [
+          "people_research",
+          "social_inquiry"
+        ]
+      }
+    ],
+    "origin": "Proposed 20Q only",
+    "displayNumber": 10,
+    "chapterTitle": "How Do You Think?"
+  },
+  {
+    "id": "Q07",
+    "stage": 2,
+    "type": "likert",
+    "prompt": "I enjoy exploring why people behave differently and how society works.",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "signals": [
+      "people_research",
+      "social_inquiry"
+    ],
+    "neutralIsZero": true,
+    "displayNumber": 11,
+    "origin": "12Q draft",
+    "chapterTitle": "How Do You Think?"
+  },
+  {
+    "id": "Q11",
+    "stage": 2,
+    "type": "scenario",
+    "prompt": "You can help create a new experience. Which part sounds most enjoyable?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Plan how guests experience a hotel or visitor attraction",
+        "signals": [
+          "hospitality",
+          "service_operations"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Coordinate journeys and improve transport operations",
+        "signals": [
+          "transport_operations",
+          "service_operations"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Create an interactive game or digital story",
+        "signals": [
+          "digital_media",
+          "creative_expression"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Develop activities that help children learn",
+        "signals": [
+          "education",
+          "child_development"
+        ]
+      }
+    ],
+    "displayNumber": 12,
+    "origin": "12Q draft",
+    "chapterTitle": "How Do You Think?"
+  },
+  {
+    "id": "Q12",
+    "stage": 2,
+    "type": "scenario",
+    "prompt": "Choose something unfamiliar to explore for an afternoon. Which would you try?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Study how cultures and societies changed through history",
+        "signals": [
+          "cultural_studies",
+          "historical_inquiry"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Use mathematical models to explain a physical phenomenon",
+        "signals": [
+          "quantitative_modelling",
+          "physics"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Explore how data helps people make decisions",
+        "signals": [
+          "data_reasoning",
+          "statistics"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Explore how laws and public institutions affect public life",
+        "signals": [
+          "law_policy",
+          "social_inquiry"
+        ]
+      }
+    ],
+    "displayNumber": 13,
+    "origin": "12Q draft",
+    "chapterTitle": "How Do You Think?"
+  },
+  {
+    "id": "Q09",
+    "stage": 3,
+    "type": "scenario",
+    "prompt": "An everyday product could be improved. Which contribution appeals to you?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Redesign and test its physical mechanism",
+        "signals": [
+          "engineering_design",
+          "prototyping"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Make it more usable and visually clear",
+        "signals": [
+          "inclusive_design",
+          "visual_design"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Find out what customers need and value",
+        "signals": [
+          "consumer_research",
+          "business_strategy"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Develop a digital feature to improve it",
+        "signals": [
+          "software_creation",
+          "digital_problem_solving"
+        ]
+      }
+    ],
+    "displayNumber": 14,
+    "origin": "12Q draft",
+    "chapterTitle": "Your Academic Adventure"
+  },
+  {
+    "id": "Q08",
+    "stage": 3,
+    "type": "likert",
+    "prompt": "I would enjoy examining different sides of a debate about fairness, rights or public decisions.",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "signals": [
+      "law_policy",
+      "ethical_reasoning"
+    ],
+    "neutralIsZero": true,
+    "displayNumber": 15,
+    "origin": "12Q draft",
+    "chapterTitle": "Your Academic Adventure"
+  },
+  {
+    "id": "Q10",
+    "stage": 3,
+    "type": "scenario",
+    "prompt": "You can join one research project. Which would you choose?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Investigate disease mechanisms and biological discoveries",
+        "signals": [
+          "biomedical_research",
+          "living_systems"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Study pollution and environmental change",
+        "signals": [
+          "environmental_inquiry",
+          "scientific_inquiry"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Study new materials or forms of energy",
+        "signals": [
+          "materials_energy",
+          "physics"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Study how communities respond to social change",
+        "signals": [
+          "social_inquiry",
+          "community"
+        ]
+      }
+    ],
+    "displayNumber": 16,
+    "origin": "12Q draft",
+    "chapterTitle": "Your Academic Adventure"
+  },
+  {
+    "id": "N05",
+    "stage": 3,
+    "type": "scenario",
+    "prompt": "A new health discovery is being developed. Which part appeals to you?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Study the biological causes of disease",
+        "signals": [
+          "biomedical_research",
+          "living_systems"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Support people through treatment or recovery",
+        "signals": [
+          "person_care",
+          "rehabilitation"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Design technology that assists diagnosis or care",
+        "signals": [
+          "biomedical_technology",
+          "engineering_design"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Investigate how health affects communities",
+        "signals": [
+          "social_inquiry",
+          "community"
+        ]
+      }
+    ],
+    "displayNumber": 17,
+    "origin": "New 18Q candidate",
+    "chapterTitle": "Your Academic Adventure"
+  },
+  {
+    "id": "N06",
+    "stage": 3,
+    "type": "scenario",
+    "prompt": "A city wants to improve the way people move around. Which task interests you?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Design bridges, roads or other physical infrastructure",
+        "signals": [
+          "civil_infrastructure",
+          "engineering_design"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Build and test machines or moving parts",
+        "signals": [
+          "mechanical_systems",
+          "prototyping"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Design electronic sensors and control systems",
+        "signals": [
+          "electronics",
+          "engineering_design"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Study transport behaviour and service planning",
+        "signals": [
+          "transport_operations",
+          "service_operations"
+        ]
+      }
+    ],
+    "displayNumber": 18,
+    "origin": "New 18Q candidate",
+    "chapterTitle": "Your Academic Adventure"
+  },
+  {
+    "id": "N04",
+    "stage": 3,
+    "type": "likert",
+    "prompt": "I like turning creative ideas into something others can see, hear or interact with.",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "signals": [
+      "creative_expression",
+      "visual_design",
+      "digital_media"
+    ],
+    "neutralIsZero": true,
+    "displayNumber": 19,
+    "origin": "New 18Q candidate",
+    "chapterTitle": "Your Academic Adventure"
+  },
+  {
+    "id": "N07",
+    "stage": 3,
+    "type": "scenario",
+    "prompt": "A coastal area faces environmental challenges. Which activity would you want to explore?",
+    "maxSelections": 2,
+    "allowUnsure": true,
+    "options": [
+      {
+        "id": "A",
+        "text": "Investigate changes in water, soil and ecosystems",
+        "signals": [
+          "environmental_inquiry",
+          "scientific_inquiry"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "Design technologies or infrastructure to reduce pollution",
+        "signals": [
+          "environmental_engineering",
+          "engineering_design"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "Study how policies and communities shape environmental outcomes",
+        "signals": [
+          "law_policy",
+          "community"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "Plan how organisations can reduce resource waste",
+        "signals": [
+          "service_operations",
+          "environmental_inquiry"
+        ]
+      }
+    ],
+    "origin": "Proposed 20Q only",
+    "displayNumber": 20,
+    "chapterTitle": "Your Academic Adventure"
+  }
+]
