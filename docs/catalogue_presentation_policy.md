@@ -25,3 +25,8 @@ Decision confirmed by project owner, 15 October 2026.
 ## Source and link policy
 Only official AU websites may support degree titles, availability, cohort restrictions, admission routes and URLs. Index-level links must be identified as such. Do not invent links.
 The provisional catalogue remains usable internally while each school's official audit proceeds. Student display must filter confirmed retired names and historical aliases.
+
+## Music presentation decision (15 October 2026)
+- Show **Music — NUS (Bachelor of Music (Honours))** as **one individual programme** in the student-facing catalogue and recommendations.
+- Do **not** list individual instruments, performance disciplines, or music majors as separate quiz programmes.
+- University-specific music study options may be described on the official programme page, but do not generate separate result cards or duplicate degrees.
