@@ -1,0 +1,574 @@
+{
+  "version": "followups-v1.0-proposal",
+  "status": "design frozen for prototype; numeric calibration unvalidated",
+  "core_questions": "The existing 12-question candidate; untouched",
+  "followups": [
+    {
+      "id": "F01",
+      "triggerFamily": "computing",
+      "prompt": "What would you prefer to investigate in a digital project?",
+      "maxSelections": 2,
+      "optional": true,
+      "options": [
+        {
+          "id": "A",
+          "text": "Protect systems and investigate security problems",
+          "signals": [
+            "cybersecurity"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "Build software or apps",
+          "signals": [
+            "software_creation"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "Train or evaluate intelligent systems",
+          "signals": [
+            "ai_methods"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "Find useful patterns in datasets",
+          "signals": [
+            "statistics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "triggerFamily": "health",
+      "prompt": "Which healthcare-related activities appeal most?",
+      "maxSelections": 2,
+      "optional": true,
+      "options": [
+        {
+          "id": "A",
+          "text": "Work directly with people on treatment and care",
+          "signals": [
+            "person_care"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "Help people recover skills and everyday movement",
+          "signals": [
+            "rehabilitation"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "Investigate disease and medicines through research",
+          "signals": [
+            "biomedical_research"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "Design devices or technology to support health",
+          "signals": [
+            "engineering_design",
+            "biomedical_technology"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "triggerFamily": "engineering",
+      "prompt": "Which engineering challenge would you most like to tackle?",
+      "maxSelections": 2,
+      "optional": true,
+      "options": [
+        {
+          "id": "A",
+          "text": "Design transport links, buildings or infrastructure",
+          "signals": [
+            "civil_infrastructure"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "Understand machines, motion and energy",
+          "signals": [
+            "mechanical_systems"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "Design electronic circuits or devices",
+          "signals": [
+            "electronics"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "Design technology to address environmental challenges",
+          "signals": [
+            "environmental_engineering"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "triggerFamily": "humanities",
+      "prompt": "Which type of question most interests you?",
+      "maxSelections": 2,
+      "optional": true,
+      "options": [
+        {
+          "id": "A",
+          "text": "How past events shaped societies",
+          "signals": [
+            "historical_inquiry"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "How language and stories convey meaning",
+          "signals": [
+            "literature_language"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "How arguments about truth and ethics work",
+          "signals": [
+            "philosophy"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "How regions and cultures developed",
+          "signals": [
+            "cultural_studies"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "triggerFamily": "applied",
+      "prompt": "Which less familiar degree theme would you explore?",
+      "maxSelections": 2,
+      "optional": true,
+      "options": [
+        {
+          "id": "A",
+          "text": "Sport, movement and human performance",
+          "signals": [
+            "sport_science"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "Food products, nutrition and processing",
+          "signals": [
+            "food_science"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "Aviation, maritime or transport operations",
+          "signals": [
+            "transport_operations"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "Hospitality, visitor experiences and service",
+          "signals": [
+            "hospitality"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "triggerFamily": "business",
+      "prompt": "Which part of business would you explore?",
+      "maxSelections": 2,
+      "optional": true,
+      "options": [
+        {
+          "id": "A",
+          "text": "Economic systems and policies",
+          "signals": [
+            "economics"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "Accounting and financial records",
+          "signals": [
+            "accounting"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "Marketing and customer behaviour",
+          "signals": [
+            "consumer_research"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "Operations and planning services",
+          "signals": [
+            "service_operations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F07",
+      "triggerFamily": "creative",
+      "prompt": "Which creative activity is most appealing?",
+      "maxSelections": 2,
+      "optional": true,
+      "options": [
+        {
+          "id": "A",
+          "text": "Visual communication and graphic design",
+          "signals": [
+            "visual_design"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "Music and live performance",
+          "signals": [
+            "performing_arts"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "Digital games and interactive media",
+          "signals": [
+            "digital_media"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "Designing products and user experiences",
+          "signals": [
+            "inclusive_design"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F08",
+      "triggerFamily": "environment",
+      "prompt": "How would you prefer to work on environmental challenges?",
+      "maxSelections": 2,
+      "optional": true,
+      "options": [
+        {
+          "id": "A",
+          "text": "Investigate ecological changes",
+          "signals": [
+            "environmental_inquiry"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "Design environmental technologies",
+          "signals": [
+            "environmental_engineering"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "Develop policies for communities",
+          "signals": [
+            "law_policy",
+            "environmental_inquiry"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "Plan sustainable services or business operations",
+          "signals": [
+            "service_operations",
+            "environmental_inquiry"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F09",
+      "triggerFamily": "society",
+      "prompt": "What would you most enjoy understanding or supporting?",
+      "maxSelections": 2,
+      "optional": true,
+      "options": [
+        {
+          "id": "A",
+          "text": "Why individuals think and behave differently",
+          "signals": [
+            "psychology"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "How communities respond to social challenges",
+          "signals": [
+            "social_inquiry",
+            "community"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "How children learn and develop",
+          "signals": [
+            "child_development",
+            "education"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "How organisations communicate with the public",
+          "signals": [
+            "creative_communication",
+            "people_research"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F10",
+      "triggerFamily": "physical_sciences",
+      "prompt": "Which science activity are you most curious to try?",
+      "maxSelections": 2,
+      "optional": true,
+      "options": [
+        {
+          "id": "A",
+          "text": "Explore substances, reactions and laboratory analysis",
+          "signals": [
+            "chemistry"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "Investigate forces, energy and physical models",
+          "signals": [
+            "physics",
+            "quantitative_modelling"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "Use mathematical models to solve abstract problems",
+          "signals": [
+            "quantitative_modelling"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "Study new materials and their properties",
+          "signals": [
+            "materials_energy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F11",
+      "triggerFamily": "law_policy",
+      "prompt": "Which issue would you most like to investigate?",
+      "maxSelections": 2,
+      "optional": true,
+      "options": [
+        {
+          "id": "A",
+          "text": "How laws and legal arguments are interpreted",
+          "signals": [
+            "law_policy"
+          ]
+        },
+        {
+          "id": "B",
+          "text": "How public decisions affect different communities",
+          "signals": [
+            "law_policy",
+            "community"
+          ]
+        },
+        {
+          "id": "C",
+          "text": "Whether actions or rules can be ethically justified",
+          "signals": [
+            "ethical_reasoning",
+            "philosophy"
+          ]
+        },
+        {
+          "id": "D",
+          "text": "How governments and societies change over time",
+          "signals": [
+            "historical_inquiry",
+            "social_inquiry"
+          ]
+        }
+      ]
+    }
+  ],
+  "exploration": {
+    "id": "EXPLORE",
+    "type": "navigation",
+    "prompt": "Explore something different",
+    "description": "Browse all academic areas even if they did not appear in your matches. Pick an area to answer one optional refinement question or browse available programmes.",
+    "availableToAll": true,
+    "areas": [
+      {
+        "id": "physical_sciences",
+        "label": "Physical Sciences"
+      },
+      {
+        "id": "life_health",
+        "label": "Life Health"
+      },
+      {
+        "id": "computing",
+        "label": "Computing"
+      },
+      {
+        "id": "engineering",
+        "label": "Engineering"
+      },
+      {
+        "id": "business",
+        "label": "Business"
+      },
+      {
+        "id": "society",
+        "label": "Society"
+      },
+      {
+        "id": "humanities",
+        "label": "Humanities"
+      },
+      {
+        "id": "creative",
+        "label": "Creative"
+      },
+      {
+        "id": "law_policy",
+        "label": "Law Policy"
+      },
+      {
+        "id": "applied",
+        "label": "Applied"
+      },
+      {
+        "id": "environment",
+        "label": "Environment"
+      }
+    ]
+  },
+  "taxonomy": {
+    "physical_sciences": [
+      "scientific_inquiry",
+      "chemistry",
+      "physics",
+      "quantitative_modelling",
+      "materials_energy"
+    ],
+    "life_health": [
+      "living_systems",
+      "biomedical_research",
+      "person_care",
+      "rehabilitation",
+      "biomedical_technology"
+    ],
+    "computing": [
+      "digital_problem_solving",
+      "data_reasoning",
+      "software_creation",
+      "cybersecurity",
+      "ai_methods",
+      "statistics"
+    ],
+    "engineering": [
+      "engineering_design",
+      "prototyping",
+      "mechanical_systems",
+      "civil_infrastructure",
+      "electronics",
+      "environmental_engineering"
+    ],
+    "business": [
+      "business_strategy",
+      "entrepreneurship",
+      "consumer_research",
+      "economics",
+      "accounting",
+      "service_operations"
+    ],
+    "society": [
+      "people_research",
+      "community",
+      "social_inquiry",
+      "psychology",
+      "child_development"
+    ],
+    "humanities": [
+      "cultural_studies",
+      "historical_inquiry",
+      "literature_language",
+      "philosophy"
+    ],
+    "creative": [
+      "creative_communication",
+      "creative_expression",
+      "performing_arts",
+      "digital_media",
+      "visual_design",
+      "inclusive_design"
+    ],
+    "law_policy": [
+      "law_policy",
+      "ethical_reasoning"
+    ],
+    "applied": [
+      "hospitality",
+      "transport_operations",
+      "education",
+      "sport_science",
+      "food_science",
+      "rehabilitation"
+    ],
+    "environment": [
+      "environmental_inquiry",
+      "environmental_engineering"
+    ]
+  },
+  "rules": {
+    "core_checkpoint": "Always available after 12 questions; display supported families or disciplines; no requirement to dive deeper.",
+    "entry": "User chooses Refine My Matches or Explore Something Different; any area may be explored even if absent from core results.",
+    "routing": "Select target area explicitly or use the strongest supported area; never auto-route to an unasked niche solely from the catalogue.",
+    "maximum_followup_questions_per_visit": 3,
+    "max_selected_options_per_question": 2,
+    "unselected_options": "No negative signal; skip/unsure gives no signal.",
+    "answer_evidence": "Deduplicate by question ID per discipline; two options selected in one question count as one independent supporting question.",
+    "core_stability": "Freeze core interest scores and initial recommendation order; optional replies create a labelled refined view and do not rewrite the initial results.",
+    "within_family_scoring": "For each candidate discipline, calculate direct support as count of distinct positively supporting questions (core + follow-up), and specificity as count of distinct question-level direct signals. Do not sum raw number of tags or catalogue entries. Compare only within the selected academic family. Normalise for each candidate by the number of applicable questions presented; never score unasked follow-ups as disagreements.",
+    "eligibility": "Specialised top-match promotion needs support from at least two distinct questions, including at least one directly relevant answer, and sufficient separation from sister disciplines. Thresholds for separation remain to be empirically calibrated; ties remain family-level.",
+    "one_followup": "If a candidate receives only one unique supporting question, surface it as a labelled exploration suggestion, not as a confirmed top match.",
+    "cross_family": "Refining family A cannot reduce the core score of family B. Explore Something Different may append a separately labelled exploration area but must not silently displace core top matches.",
+    "explicit_negative": "A genuine negative Likert response may count as counterevidence only for its stated interest; not selecting a scenario option never indicates dislike.",
+    "explanations": "Generate factual why-this-might-interest-you from at most 2-3 distinct positively answered question IDs plus a reviewed discipline description. Never claim aptitude or match probability; never infer specific interests without explicit evidence.",
+    "unmapped_disciplines": "Keep as browsable with insufficient questionnaire evidence; flag for mapping review; no auto-assignment based on NUS programme name.",
+    "catalogue_independence": "Adding/removing/renaming AU programmes cannot change any core or refined discipline score or evidence count.",
+    "presentation": "Top Qualities remain cautiously phrased as expressed preferences; Explore Similar Majors is navigable and compact.",
+    "qs": "QS is optional sorting/display later and never affects interest scoring."
+  }
+}
