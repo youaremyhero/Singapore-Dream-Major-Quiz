@@ -1,7 +1,7 @@
 import unittest, sys, pathlib
 sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]/"src"))
 from engine import score, Q
-from programme_matcher import shortlist, explore_other_opportunities, load_current_catalogue, PRIMARY_TYPES
+from programme_matcher import shortlist, explore_other_opportunities, load_current_catalogue, recommendation_report, PRIMARY_TYPES
 
 class Tests(unittest.TestCase):
     def test_20_questions_three_mixed_chapters(self):
@@ -58,6 +58,31 @@ class Tests(unittest.TestCase):
         original=score(core)["core_family_scores"]
         shortlist(score(core),load_current_catalogue(),limit=5)
         self.assertEqual(original,score(core)["core_family_scores"])
+
+    def test_reporting_preserves_family_ties(self):
+        result={"core_family_scores":{"computing":3,"business":3},
+                "core_family_order":["business","computing"],
+                "eligible_discipline_signals":[],"core_evidence":{}}
+        report=recommendation_report(result,limit=5)
+        self.assertTrue(report["core_family_groups"][0]["is_tie"])
+        self.assertEqual(set(report["core_family_groups"][0]["families"]),{"computing","business"})
+        self.assertEqual(len(report["top_matches"]),5)
+        self.assertTrue(all(x["recommendation_level"]=="family_exploration" for x in report["top_matches"]))
+
+    def test_explanations_are_not_unearned_specificity(self):
+        result={"core_family_scores":{"computing":3},
+                "core_family_order":["computing"],"eligible_discipline_signals":[],
+                "core_evidence":{"digital_problem_solving":["Q01","Q02"]}}
+        report=recommendation_report(result,limit=3)
+        self.assertTrue(report["top_matches"])
+        self.assertTrue(all("do not yet distinguish" in m["why_this_fits"] for m in report["top_matches"]))
+        self.assertTrue(all(m["why_this_fits_basis"]["supporting_question_ids"]==["Q01","Q02"]
+                            for m in report["top_matches"]))
+
+    def test_uncertain_student_is_not_forced_to_choose(self):
+        report=recommendation_report(score({}))
+        self.assertEqual(report["status"],"explore_more")
+        self.assertEqual(report["top_matches"],[])
 
     def test_no_catalogue_size_effect_on_core_scores(self):
         answers={q["id"]:4 for q in Q if q["type"]=="likert"}
