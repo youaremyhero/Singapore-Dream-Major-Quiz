@@ -5,6 +5,7 @@ programme status, university admission routes, or source links.
 """
 import csv
 from pathlib import Path
+from discipline_mapping import infer_discipline
 
 PRIMARY_TYPES = {
     "Undergraduate degree / programme", "Primary major",
@@ -68,7 +69,9 @@ def shortlist(scoring_result, catalogue_rows=None, review_hints=None, limit=5):
         categories = {x.strip() for x in row.get("Discovery Areas (PROVISIONAL)","").split(";") if x.strip()}
         matched = [f for f in positive if categories & FAMILY_AREAS.get(f,set())]
         hints = review_hints.get(row.get("Record ID"),set())
-        direct = sorted(direct_signals & hints)
+        title_discipline=infer_discipline(row)
+        # A narrow title can be directly supported only by the evidence-gated discipline.
+        direct = [title_discipline] if title_discipline in direct_signals else []
         if not matched: continue
         primary_family = matched[0]
         main_score = scores[primary_family]
@@ -78,6 +81,8 @@ def shortlist(scoring_result, catalogue_rows=None, review_hints=None, limit=5):
             "admission_pathway":row.get("Parent Degree / Pathway"),
             "family_id":primary_family,"family_score":main_score,
             "direct_discipline_signals":direct,
+            "title_discipline":title_discipline,
+            "mapping_method":"exact_title_rule" if title_discipline else "family_only",
             "source_url":row.get("Source URL"),
             "source_verification_note":row.get("Verification Status"),
             "display_status":"prototype_catalogue_match",
