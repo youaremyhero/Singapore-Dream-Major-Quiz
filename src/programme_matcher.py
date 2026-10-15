@@ -93,6 +93,7 @@ def shortlist(scoring_result, catalogue_rows=None, review_hints=None, limit=5):
         hints = review_hints.get(row.get("Record ID"),set())
         # A narrow title can be directly supported only by the evidence-gated discipline.
         direct = [title_discipline] if title_discipline in direct_signals else []
+        discipline_support = scoring_result.get("discipline_evidence",{}).get(title_discipline or "",{}).get("count",0)
         if not matched: continue
         primary_family = matched[0]
         main_score = scores[primary_family]
@@ -103,6 +104,7 @@ def shortlist(scoring_result, catalogue_rows=None, review_hints=None, limit=5):
             "family_id":primary_family,"family_score":main_score,
             "direct_discipline_signals":direct,
             "title_discipline":title_discipline,
+            "direct_question_count":discipline_support,
             "mapping_method":"exact_title_rule" if title_discipline else "family_only",
             "source_url":row.get("Source URL"),
             "source_verification_note":row.get("Verification Status"),
@@ -113,6 +115,7 @@ def shortlist(scoring_result, catalogue_rows=None, review_hints=None, limit=5):
                 "independent_core_questions":main_score,
                 "supporting_question_ids":sorted(set().union(*(set(scoring_result.get("core_evidence", {}).get(signal, [])) for signal in scoring_result.get("core_evidence", {}) if signal in FAMILY_SIGNALS.get(primary_family,set())))),
                 "direct_discipline_hints":direct,
+                "direct_question_count":discipline_support,
                 "claim_strength":"exploratory_not_verified"
             },
             "_matched":len(matched),
@@ -128,8 +131,8 @@ def shortlist(scoring_result, catalogue_rows=None, review_hints=None, limit=5):
     while len(selected)<limit:
         remaining=[r for r in candidates if r["programme_id"] not in used_ids]
         if not remaining: break
-        highest=max(r["family_score"] for r in remaining)
-        tier=[r for r in remaining if r["family_score"]==highest]
+        # Distinctive answers can guide explorations, but do not become a\n        # specific-major claim until the separate two-question gate passes.\n        highest=max((min(r["direct_question_count"],2),r["family_score"]) for r in remaining)
+        tier=[r for r in remaining if (min(r["direct_question_count"],2),r["family_score"])==highest]
         tier.sort(key=lambda r:(
             -bool(r["direct_discipline_signals"]),
             family_count.get(r["family_id"],0),
