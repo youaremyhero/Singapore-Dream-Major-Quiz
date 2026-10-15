@@ -31,3 +31,6 @@ Sources are the NUS official AY2026/27 Bulletin and school-controlled programme 
 - Check legacy/renamed offerings before hiding them. Do not infer closure from missing links.
 
 The full six-AU catalogue is still being audited school by school. Do not claim the overall catalogue is verified.
+
+## Music catalogue decision (confirmed by project owner)
+Represent **Music — Bachelor of Music (Honours)** as **one student-facing programme**. Do not create separate catalogue/result entries for individual music majors, instruments or performance specialisations. Keep the official degree link and any detailed major information only as supporting context, if useful. This overrides the earlier planned individual music-major reconciliation.
