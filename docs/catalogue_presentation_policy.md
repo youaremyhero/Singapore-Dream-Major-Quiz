@@ -33,3 +33,9 @@ The provisional catalogue remains usable internally while each school's official
 
 ## NUS Music
 Treat **Bachelor of Music (Honours)** as one student-facing Music programme. Individual instruments and music majors are not separate quiz programme records or top matches. Retain their detail only as supporting source context, not as additional recommendations.
+
+## NUS Language Studies minor — 20 October 2026
+- Show **Minor in Language Studies** as a single supplementary minor programme, not separate cards for individual languages or language tracks.
+- Keep individual-language entries in the historical working catalogue until an explicitly reviewed canonical-data merge; do not present them as distinct current minor recommendations.
+- Official NUS Centre for Language Studies source: https://fass.nus.edu.sg/cls/minor-in-language-studies/
+- This rule applies to the CLS Language Studies minor only; it does **not** combine separately offered Chinese Studies department minors such as Chinese Languages and Cultures.
