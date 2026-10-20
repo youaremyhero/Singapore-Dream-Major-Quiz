@@ -57,3 +57,16 @@ Do not mark this NUS dataset fully verified or ready for unrestricted use in the
 
 ## Next work
 Continue per-programme links and cohort verification from the 199 flagged rows in the master ledger, then reconcile the 10 double degrees and check for previously omitted 2026 majors. Present unresolved policy questions together at the end, and only then proceed to NTU.
+
+## Final unmatched-name review
+The main catalogue has **54 second-major rows and 114 minor rows**, but their totals are **not independently validated current programme counts**. An exact-name comparison against the Registrar audit yields:
+- Second-major differences: Chinese Languages and Cultures, Chinese Studies (Bilingual), Environmental Science for Sustainability, Forensic Science, Marine and Freshwater Ecology. These are supported by official departmental evidence from earlier NUS batches; do **not** delete because of absent exact Registrar wording.
+- Minor differences: two current Chinese cohort names, twelve archived language tracks (suppressed), and Multilingual Communication (separately supported by CLS). This explains the working-list differences without inventing programme discontinuations.
+- The official Registrar names Chinese Language and Chinese Studies in places where FASS shows newer cohort names. Faculty cohort data takes precedence.
+- Catalogue row counts include archive tracks, OAM application choices and double degrees. Do not compare the raw catalogue count directly with NUS publicity totals.
+
+## Checks completed
+- Main NUS catalogue contains 256 distinct NUS IDs, all 15 expected CSV columns per row.
+- The record-level audit ledger contains the same 256 distinct IDs, with none missing.
+- Primary Music degree was missing; added NUS-0256 (one Music entry).
+- No scoring/frontend files modified.
